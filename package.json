@@ -1,0 +1,11 @@
+{
+  "name": "minimal-repo-starter",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "license": "MIT",
+  "devDependencies": {
+    "@2nthony/prettier-config": "^1.0.0"
+  }
+}

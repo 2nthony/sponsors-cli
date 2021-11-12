@@ -1,0 +1,13 @@
+lockfileVersion: 5.3
+
+specifiers:
+  '@2nthony/prettier-config': ^1.0.0
+
+devDependencies:
+  '@2nthony/prettier-config': 1.0.0
+
+packages:
+
+  /@2nthony/prettier-config/1.0.0:
+    resolution: {integrity: sha512-vAXvJAYvqjHNsH3CecHSGkdtRXLrxV5hou4icndEof8e2iFKTxwvNT7cIY2ur3tkItWWTe7GIP4qoB0v4Wgjdg==}
+    dev: true
