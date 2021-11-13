@@ -29,7 +29,7 @@ cli
     default: 800,
     type: ['number'],
   })
-  .option('-i, --output', 'Output filename', {
+  .option('-o, --output', 'Output filename', {
     default: 'sponsors.svg',
     type: ['string'],
   })
