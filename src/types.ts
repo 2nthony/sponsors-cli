@@ -20,3 +20,33 @@ export type SponsorConfig = {
   showName: boolean
   textColor?: string
 }
+
+export type Level = {
+  title: string
+  monthlyDollars: number
+  includeOneTime: boolean
+} & SponsorConfig
+
+export interface Config {
+  /**
+   * @default 800
+   * cli `-w, --width`
+   */
+  width?: number
+  /**
+   * @default 'sponsors.svg'
+   * cli `-o, --output`
+   */
+  output?: string
+  /**
+   * @default true
+   * cli `--png`
+   */
+  png?: boolean
+  /**
+   * @default true
+   * cli `-s, --show-empty`
+   */
+  showEmpty?: boolean
+  levels?: Level[]
+}
