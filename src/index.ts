@@ -11,6 +11,9 @@ import {
   PRESET_SLIVER_SPONSOR,
   SvgComposer,
 } from './generator'
+import { createLogger } from './utils'
+
+const log = createLogger('[sponsors-cli]')
 
 const { SPONSORS_TOKEN: token, SPONSORS_LOGIN: login } = process.env
 
@@ -25,11 +28,12 @@ const cli = cac('sponsors-cli')
 
 cli
   .command('')
-  .option('-w, --width', 'Image width', {
+  .usage('[...options]')
+  .option('-w, --width [width]', 'Image width', {
     default: 800,
     type: ['number'],
   })
-  .option('-o, --output', 'Output filename', {
+  .option('-o, --output [output]', 'Output filename', {
     default: 'sponsors.svg',
     type: ['string'],
   })
@@ -38,10 +42,10 @@ cli
     type: ['boolean'],
   })
   .action(async ({ width, output, png }) => {
-    console.log('fetching...')
+    log('fetching...')
 
     const sponsorships = await fetch(token, login)
-    console.log(`${sponsorships.length} sponsors`)
+    log(`${sponsorships.length} sponsors`)
 
     sponsorships.sort((a, b) => a.createdAt.localeCompare(b.createdAt))
 
