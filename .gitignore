@@ -1,0 +1,4 @@
+.cache.json
+.processed.json
+.raw.json
+.env
