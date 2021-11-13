@@ -5,13 +5,9 @@ import cac from 'cac'
 import { partition } from '@antfu/utils'
 import { version } from '../package.json'
 import { fetch } from './fetch'
-import {
-  PRESET_BACKER,
-  PRESET_GOLD_SPONSOR,
-  PRESET_SLIVER_SPONSOR,
-  SvgComposer,
-} from './generator'
+import { SvgComposer } from './generator'
 import { createLogger } from './utils'
+import { presetConfig, resolveConfig } from './config'
 
 const log = createLogger('[sponsors-cli]')
 
@@ -30,48 +26,50 @@ cli
   .command('')
   .usage('[...options]')
   .option('-w, --width [width]', 'Image width', {
-    default: 800,
-    type: ['number'],
+    default: presetConfig.width,
   })
   .option('-o, --output [output]', 'Output filename', {
-    default: 'sponsors.svg',
-    type: ['string'],
+    default: presetConfig.output,
   })
   .option('--png', 'Whether to generate png', {
-    default: true,
-    type: ['boolean'],
+    default: presetConfig.png,
   })
-  .action(async ({ width, output, png }) => {
+  .option('-s, --show-empty', 'Whether to show empty sponsors level', {
+    default: presetConfig.showEmpty,
+  })
+  .action(async (configFromCLI) => {
     log('fetching...')
+
+    const { width, output, png, showEmpty, levels } =
+      resolveConfig(configFromCLI)
 
     const sponsorships = await fetch(token, login)
     log(`${sponsorships.length} sponsors`)
 
     sponsorships.sort((a, b) => a.createdAt.localeCompare(b.createdAt))
 
-    const [gold, rest] = partition(sponsorships, (i) => i.monthlyDollars >= 50)
-    const [silver, backers] = partition(
-      rest,
-      (i) => i.monthlyDollars >= 10 && !i.isOneTime,
-    )
+    const svgComposer = new SvgComposer(width).addSpan(50)
 
-    const svg = new SvgComposer(width)
-      .addSpan(50)
-      .addTitle('Gold Sponsors')
-      .addSpan(5)
-      .addSponsorGrid(gold, PRESET_GOLD_SPONSOR)
-      .addSpan(30)
-      .addTitle('Silver Sponsors')
-      .addSpan(5)
-      .addSponsorGrid(silver, PRESET_SLIVER_SPONSOR)
-      .addSpan(30)
-      .addTitle('Backers')
-      .addSpan(5)
-      .addSponsorGrid(backers, PRESET_BACKER)
-      .addSpan(30)
-      .generateSvg()
+    let rest = sponsorships
+    levels.forEach((level) => {
+      const [sponsors, r] = partition(rest, (ship) => {
+        return (
+          ship.monthlyDollars >= level.monthlyDollars &&
+          ship.isOneTime === level.includeOneTime
+        )
+      })
+      rest = r || []
 
-    await fs.writeFile(output, svg, 'utf8')
+      if (sponsors.length || showEmpty) {
+        svgComposer
+          .addTitle(level.title)
+          .addSpan(5)
+          .addSponsorGrid(sponsors, level)
+          .addSpan(30)
+      }
+    })
+
+    await fs.writeFile(output, svgComposer.generateSvg(), 'utf8')
 
     if (png) {
       await sharp(output, { density: 150 })
