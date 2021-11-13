@@ -1,11 +1,46 @@
 {
-  "name": "minimal-repo-starter",
-  "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {},
+  "name": "sponsors-cli",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "author": "2nthony<https://github.com/2nthony>",
+  "scripts": {
+    "dev": "esno -r dotenv/config src/index.ts",
+    "build": "tsup src/index.ts --dts --format cjs,esm",
+    "prepare": "npm run build",
+    "release": "npx bumpp --tag --commit --push && npm publish"
+  },
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "2nthony/sponsors-cli"
+  },
+  "homepage": "https://github.com/2nthony/sponsors-cli#readme",
+  "files": [
+    "dist",
+    "index.js"
+  ],
+  "bin": {
+    "sponsors-cli": "index.js"
+  },
   "devDependencies": {
-    "@2nthony/prettier-config": "^1.0.0"
+    "@2nthony/prettier-config": "^1.0.0",
+    "@antfu/utils": "^0.3.0",
+    "@types/fs-extra": "^9.0.13",
+    "@types/node": "^16.11.7",
+    "@types/node-fetch": "2",
+    "@types/sharp": "^0.29.3",
+    "@types/yargs": "^17.0.5",
+    "dotenv": "^10.0.0",
+    "esno": "^0.12.0",
+    "tsup": "^5.7.0",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "cac": "^6.7.12",
+    "fs-extra": "^10.0.0",
+    "image-data-uri": "^2.0.1",
+    "node-fetch": "2",
+    "sharp": "^0.29.2",
+    "yargs": "^17.2.1"
   }
 }
