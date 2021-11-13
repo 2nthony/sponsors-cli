@@ -1,5 +1,5 @@
-export function createLogger(prefix: string) {
-  return (...args: string[]) => {
+export function createLogger(prefix: any) {
+  return (...args: any[]) => {
     console.log(prefix, ...args)
   }
 }
