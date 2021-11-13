@@ -38,28 +38,6 @@ export function generateBadge(
 </a>`.trim()
 }
 
-export const PRESET_GOLD_SPONSOR = {
-  size: 70,
-  width: 90,
-  height: 115,
-  gridPadding: 60,
-  showName: true,
-}
-export const PRESET_SLIVER_SPONSOR = {
-  size: 50,
-  width: 80,
-  height: 90,
-  gridPadding: 50,
-  showName: true,
-}
-export const PRESET_BACKER = {
-  size: 40,
-  width: 48,
-  height: 48,
-  gridPadding: 50,
-  showName: false,
-}
-
 export class SvgComposer {
   width: number
   height: number
