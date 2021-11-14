@@ -1,10 +1,35 @@
 # sponsors-cli
 
+## Usage
+
+```sh
+# env
+SPONSORS_LOGIN=github_username
+SPONSORS_TOKEN=github_token
+
+# sh
+npx spnsors-cli
+```
+
+The token should include scopes `read:org` and `read:user`, [here](https://github.com/settings/tokens) to generate one.
+
+To use in actions you can fork [2nthony/sponsors-image](https://github.com/2nthony/sponsors-image) then replace secrets and username in workflows.
+
+## Config
+
+Support config file `sponsors.config.js`, for more details read [types.ts](./src/types.ts).
+
+```js
+module.exports = {
+  /* options */
+}
+```
+
 ## Credit
 
-This is a "translate" job from [@antfu](https://github.com/antfu)'s [./sponsors.svg](https://www.npmjs.com/package/sponsors-svg).
+This is a "translate" job from [@antfu](https://github.com/antfu)'s [./sponsors.svg](https://www.npmjs.com/package/sponsors-svg) but with **opinionated** features.
 
-## Sponsors
+## Example
 
 [![sponsors](https://cdn.jsdelivr.net/gh/2nthony/sponsors-image/sponsors.svg)](https://github.com/sponsors/2nthony)
 
