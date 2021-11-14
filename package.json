@@ -45,7 +45,7 @@
   "release": {
     "branches": [
       "+([0-9])?(.{+([0-9]),x}).x",
-      "$default-branch",
+      "main",
       "next",
       "next-major",
       {
