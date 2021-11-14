@@ -33,7 +33,7 @@ export type Level = {
 export interface Config {
   /**
    * Image width
-   * cli `-w, --width`
+   * cli `-w, --width [width]`
    *
    * @default 800
    */
@@ -41,7 +41,7 @@ export interface Config {
 
   /**
    * Output filename
-   * cli `-o, --output`
+   * cli `-o, --output [output]`
    *
    * @default 'sponsors.svg'
    */
