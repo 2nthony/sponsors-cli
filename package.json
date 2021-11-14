@@ -41,5 +41,21 @@
     "image-data-uri": "^2.0.1",
     "node-fetch": "2",
     "sharp": "^0.29.2"
+  },
+  "release": {
+    "branches": [
+      "+([0-9])?(.{+([0-9]),x}).x",
+      "$default-branch",
+      "next",
+      "next-major",
+      {
+        "name": "beta",
+        "prerelease": true
+      },
+      {
+        "name": "alpha",
+        "prerelease": true
+      }
+    ]
   }
 }
