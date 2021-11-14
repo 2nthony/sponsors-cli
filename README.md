@@ -31,17 +31,7 @@ This is a "translate" job from [@antfu](https://github.com/antfu)'s [./sponsors.
 
 ## Example
 
-Mock sponsors:
-
-- 1 monthly `$50`
-- 1 one time `$50`
-- 1 monthly `$20`
-- 1 one time `$20`
-- 1 one time `$1`
-
-Will become:
-
-![](./sponsors.svg)
+Real case to see [vuesuse](https://github.com/vueuse/vueuse#readme) sponsors section.
 
 ## License
 
