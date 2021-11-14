@@ -53,10 +53,13 @@ cli
     let rest = sponsorships
     levels.forEach((level) => {
       const [sponsors, r] = partition(rest, (ship) => {
-        return (
-          ship.monthlyDollars >= level.monthlyDollars &&
-          ship.isOneTime === level.includeOneTime
-        )
+        const isReachedDollars = ship.monthlyDollars >= level.monthlyDollars
+
+        if (level.includeOneTime) {
+          return isReachedDollars
+        }
+
+        return isReachedDollars && ship.isOneTime === level.includeOneTime
       })
       rest = r || []
 
