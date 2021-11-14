@@ -1,5 +1,5 @@
 import fs from 'fs-extra'
-import nfetch from 'node-fetch'
+import _fetch from 'node-fetch'
 import { resolveAvatars } from './image'
 import { SponsorShip } from './types'
 
@@ -16,7 +16,7 @@ export async function fetch(token: string, login: string) {
   let cursor
 
   do {
-    const res = await nfetch(API, {
+    const res = await _fetch(API, {
       method: 'post',
       body: JSON.stringify({
         query: makeQuery(login, cursor),
