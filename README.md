@@ -31,7 +31,17 @@ This is a "translate" job from [@antfu](https://github.com/antfu)'s [./sponsors.
 
 ## Example
 
-[![sponsors](https://cdn.jsdelivr.net/gh/2nthony/sponsors-image/sponsors.svg)](https://github.com/sponsors/2nthony)
+Mock sponsors:
+
+- 1 monthly `$50`
+- 1 one time `$50`
+- 1 monthly `$20`
+- 1 one time `$20`
+- 1 one time `$1`
+
+Will become:
+
+![](./sponsors.svg)
 
 ## License
 
