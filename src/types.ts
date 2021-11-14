@@ -27,26 +27,44 @@ export type Level = {
   includeOneTime: boolean
 } & SponsorConfig
 
+/**
+ * `sponsors.config.js`
+ */
 export interface Config {
   /**
-   * @default 800
+   * Image width
    * cli `-w, --width`
+   *
+   * @default 800
    */
   width?: number
+
   /**
-   * @default 'sponsors.svg'
+   * Output filename
    * cli `-o, --output`
+   *
+   * @default 'sponsors.svg'
    */
   output?: string
+
   /**
-   * @default true
+   * Whether to generate png
    * cli `--png`
+   *
+   * @default true
    */
   png?: boolean
+
   /**
-   * @default true
+   * Whether to show empty sponsors level
    * cli `-s, --show-empty`
+   *
+   * @default true
    */
   showEmpty?: boolean
+
+  /**
+   * Sponsors levels group
+   */
   levels?: Level[]
 }
