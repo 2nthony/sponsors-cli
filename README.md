@@ -31,7 +31,7 @@ This is a "translate" job from [@antfu](https://github.com/antfu)'s [./sponsors.
 
 ## Example
 
-Real case to see [vuesuse](https://github.com/vueuse/vueuse#readme) sponsors section.
+The generated image is similar to [vuesuse](https://github.com/vueuse/vueuse#readme) sponsors section, by default preset.
 
 ## License
 

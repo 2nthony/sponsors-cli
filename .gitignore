@@ -1,4 +1,6 @@
 .cache.json
 .processed.json
 .raw.json
+.extra.json
 .env
+sponsors.*

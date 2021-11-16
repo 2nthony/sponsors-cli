@@ -6,13 +6,14 @@ import { SponsorShip } from './types'
 const API = 'https://api.github.com/graphql'
 const graphql = String.raw
 const CACHE_FILE = '.cache.json'
+const EXTRA_FILE = '.extra.json'
 
 export async function fetch(token: string, login: string) {
   if (fs.existsSync(CACHE_FILE)) {
     return (await fs.readJSON(CACHE_FILE)) as SponsorShip[]
   }
 
-  const sponsors = []
+  let sponsors = []
   let cursor
 
   do {
@@ -36,6 +37,11 @@ export async function fetch(token: string, login: string) {
       cursor = undefined
     }
   } while (cursor)
+
+  if (fs.existsSync(EXTRA_FILE)) {
+    const extraSponsors = (await fs.readJSON(EXTRA_FILE)) as SponsorShip[]
+    sponsors = sponsors.concat(extraSponsors)
+  }
 
   await fs.writeJSON('.raw.json', sponsors, { spaces: 2 })
 
