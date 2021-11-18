@@ -64,7 +64,7 @@ export async function fetch(token: string, login: string) {
   return processed
 }
 
-export function makeQuery(login: string, cursor: string) {
+export function makeQuery(login: string, cursor: any) {
   return graphql`{
   user(login: "${login}") {
     sponsorshipsAsMaintainer(first: 100${cursor ? ` after: "${cursor}"` : ''}) {
