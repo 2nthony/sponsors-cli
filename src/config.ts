@@ -22,7 +22,7 @@ export const presetConfig: Required<Config> = {
       showName: true,
     },
     {
-      title: 'Silver Sponsors',
+      title: 'Sponsors',
       monthlyDollars: 10,
       includeOneTime: false,
       size: 50,
