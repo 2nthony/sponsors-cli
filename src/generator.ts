@@ -25,7 +25,11 @@ export function generateBadge(
       name = `${name.slice(0, 10)}...`
     }
   }
-  return `
+
+  let res = genSvgImage(x, y, size, avatarUrl)
+
+  if (login) {
+    res = `
 <a xlink:href="https://github.com/${login}" class="sponsors-svg" target="_blank" id="${login}">
   ${
     showName
@@ -34,8 +38,11 @@ export function generateBadge(
         }" text-anchor="middle" class="name" fill="${textColor}">${name}</text>`
       : ''
   }
-  ${genSvgImage(x, y, size, avatarUrl)}
+  ${res}
 </a>`.trim()
+  }
+
+  return res
 }
 
 export class SvgComposer {
