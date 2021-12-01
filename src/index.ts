@@ -43,10 +43,15 @@ cli
     const { width, output, png, showEmpty, levels } =
       resolveConfig(configFromCLI)
 
-    const sponsorships = await fetch(token, login)
+    let sponsorships = await fetch(token, login)
     log(`${sponsorships.length} sponsors`)
 
     sponsorships.sort((a, b) => a.createdAt.localeCompare(b.createdAt))
+
+    // group sponsors
+    // if sponsor have no `login` field, then move to last, similar
+    // to GitHub sponsors private sponsor
+    sponsorships = partition(sponsorships, (ship) => ship.sponsor.login).flat()
 
     const svgComposer = new SvgComposer(width).addSpan(50)
 
