@@ -35,4 +35,4 @@ The generated image is similar to [vuesuse](https://github.com/vueuse/vueuse#rea
 
 ## License
 
-MIT @ [2nthony](https://github.com/2nthony)
+MIT © [2nthony](https://github.com/2nthony)
