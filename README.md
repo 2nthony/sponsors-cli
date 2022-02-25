@@ -1,3 +1,5 @@
+> Use https://github.com/antfu/sponsorkit instead.
+
 # sponsors-cli
 
 ## Usage
