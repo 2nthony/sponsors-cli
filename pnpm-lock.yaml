@@ -4,7 +4,7 @@ specifiers:
   '@2nthony/prettier-config': 1.0.0
   '@antfu/utils': 0.3.0
   '@types/fs-extra': 9.0.13
-  '@types/node': 16.11.7
+  '@types/node': 16.11.13
   '@types/node-fetch': 2.5.12
   '@types/sharp': 0.29.3
   '@types/yargs': 17.0.5
@@ -29,7 +29,7 @@ devDependencies:
   '@2nthony/prettier-config': 1.0.0
   '@antfu/utils': 0.3.0
   '@types/fs-extra': 9.0.13
-  '@types/node': 16.11.7
+  '@types/node': 16.11.13
   '@types/node-fetch': 2.5.12
   '@types/sharp': 0.29.3
   '@types/yargs': 17.0.5
@@ -102,24 +102,24 @@ packages:
   /@types/fs-extra/9.0.13:
     resolution: {integrity: sha512-nEnwB++1u5lVDM2UI4c1+5R+FYaKfaAzS4OococimjVm3nQw3TuzH5UNsocrcTBbhnerblyHj4A49qXbIiZdpA==}
     dependencies:
-      '@types/node': 16.11.7
+      '@types/node': 16.11.13
     dev: true
 
   /@types/node-fetch/2.5.12:
     resolution: {integrity: sha512-MKgC4dlq4kKNa/mYrwpKfzQMB5X3ee5U6fSprkKpToBqBmX4nFZL9cW5jl6sWn+xpRJ7ypWh2yyqqr8UUCstSw==}
     dependencies:
-      '@types/node': 16.11.7
+      '@types/node': 16.11.13
       form-data: 3.0.1
     dev: true
 
-  /@types/node/16.11.7:
-    resolution: {integrity: sha512-QB5D2sqfSjCmTuWcBWyJ+/44bcjO7VbjSbOE0ucoVbAsSNQc4Lt6QkgkVXkTDwkL4z/beecZNDvVX15D4P8Jbw==}
+  /@types/node/16.11.13:
+    resolution: {integrity: sha512-eUXZzHLHoZqj1frtUetNkUetYoJ6X55UmrVnFD4DMhVeAmwLjniZhtBmsRiemQh4uq4G3vUra/Ws/hs9vEvL3Q==}
     dev: true
 
   /@types/sharp/0.29.3:
     resolution: {integrity: sha512-83Xp05eK2hvfNnmKLr2Fz0C2A0jrr2TnSLqKRbkLTYuAu+Erj6mKQLoEMGafE73Om8p3q3ryZxtHFM/7hy4Adg==}
     dependencies:
-      '@types/node': 16.11.7
+      '@types/node': 16.11.13
     dev: true
 
   /@types/throttle-debounce/2.1.0:
