@@ -7,7 +7,7 @@ specifiers:
   '@types/node': 16.11.7
   '@types/node-fetch': 2.5.12
   '@types/sharp': 0.29.3
-  '@types/yargs': 17.0.5
+  '@types/yargs': 17.0.7
   cac: ^6.7.12
   dotenv: 10.0.0
   esno: 0.12.0
@@ -32,7 +32,7 @@ devDependencies:
   '@types/node': 16.11.7
   '@types/node-fetch': 2.5.12
   '@types/sharp': 0.29.3
-  '@types/yargs': 17.0.5
+  '@types/yargs': 17.0.7
   dotenv: 10.0.0
   esno: 0.12.0_typescript@4.5.3
   tsup: 5.7.0_typescript@4.5.3
@@ -130,8 +130,8 @@ packages:
     resolution: {integrity: sha512-7tFImggNeNBVMsn0vLrpn1H1uPrUBdnARPTpZoitY37ZrdJREzf7I16tMrlK3hen349gr1NYh8CmZQa7CTG6Aw==}
     dev: true
 
-  /@types/yargs/17.0.5:
-    resolution: {integrity: sha512-4HNq144yhaVjJs+ON6A07NEoi9Hh0Rhl/jI9Nt/l/YRjt+T6St/QK3meFARWZ8IgkzoD1LC0PdTdJenlQQi2WQ==}
+  /@types/yargs/17.0.7:
+    resolution: {integrity: sha512-OvLKmpKdea1aWtqHv9bxVVcMoT6syAeK+198dfETIFkAevYRGwqh4H+KFxfjUETZuUuE5sQCAFwdOdoHUdo8eg==}
     dependencies:
       '@types/yargs-parser': 20.2.1
     dev: true
