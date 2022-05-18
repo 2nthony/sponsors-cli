@@ -28,7 +28,7 @@
     "@types/fs-extra": "9.0.13",
     "@types/node": "16.11.7",
     "@types/node-fetch": "2.5.12",
-    "@types/sharp": "0.29.3",
+    "@types/sharp": "0.29.4",
     "@types/yargs": "17.0.5",
     "dotenv": "10.0.0",
     "esno": "0.12.0",

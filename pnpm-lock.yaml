@@ -6,7 +6,7 @@ specifiers:
   '@types/fs-extra': 9.0.13
   '@types/node': 16.11.7
   '@types/node-fetch': 2.5.12
-  '@types/sharp': 0.29.3
+  '@types/sharp': 0.29.4
   '@types/yargs': 17.0.5
   cac: ^6.7.12
   dotenv: 10.0.0
@@ -31,7 +31,7 @@ devDependencies:
   '@types/fs-extra': 9.0.13
   '@types/node': 16.11.7
   '@types/node-fetch': 2.5.12
-  '@types/sharp': 0.29.3
+  '@types/sharp': 0.29.4
   '@types/yargs': 17.0.5
   dotenv: 10.0.0
   esno: 0.12.0_typescript@4.5.3
@@ -116,8 +116,8 @@ packages:
     resolution: {integrity: sha512-QB5D2sqfSjCmTuWcBWyJ+/44bcjO7VbjSbOE0ucoVbAsSNQc4Lt6QkgkVXkTDwkL4z/beecZNDvVX15D4P8Jbw==}
     dev: true
 
-  /@types/sharp/0.29.3:
-    resolution: {integrity: sha512-83Xp05eK2hvfNnmKLr2Fz0C2A0jrr2TnSLqKRbkLTYuAu+Erj6mKQLoEMGafE73Om8p3q3ryZxtHFM/7hy4Adg==}
+  /@types/sharp/0.29.4:
+    resolution: {integrity: sha512-asrPef2LYenr76zBzyy+Fw40yGzq/q/CY77mUP5n43DnuWjQoOB+8vxnzFcqccz+LF+A7mbnknGCfpVWSG82Bw==}
     dependencies:
       '@types/node': 16.11.7
     dev: true
